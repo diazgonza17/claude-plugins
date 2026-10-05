@@ -42,20 +42,23 @@ claude plugin install usage-pace@gontzalo
 
 También podés pedírselo a Claude: *"Instalá el mod usage-pace de github.com/diazgonza17/claude-plugins"*. Claude sigue las instrucciones de la sección siguiente y lo deja configurado en tu idioma.
 
-El widget aparece arriba del input después de la primera respuesta de la sesión.
+El widget aparece arriba del input en la próxima sesión, después de la primera respuesta.
 
 ## Instrucciones para Claude
 
 Si sos Claude y te pidieron instalar este mod:
 
-1. Agregá el marketplace e instalá el plugin con los comandos de `claude plugin` de la sección anterior.
-2. Elegí el idioma del mod (`es` o `en`) según el idioma en el que el usuario te escribe en esta conversación. No uses el idioma del sistema. Si no está claro, preguntale.
-3. Guardalo en la opción `language` del plugin: en `~/.claude/settings.json`, `pluginConfigs["usage-pace@gontzalo"].options.language`. No toques el resto del archivo.
-4. Decile que el widget aparece arriba del input después de la primera respuesta de la sesión, y que los umbrales y el idioma se cambian desde la configuración del plugin.
+1. Elegí el idioma del mod (`es` o `en`) según el idioma en el que el usuario te escribe en esta conversación. No uses el idioma del sistema. Si no está claro, preguntale.
+2. Agregá el marketplace e instalá el plugin pasando el idioma:
+   ```bash
+   claude plugin marketplace add diazgonza17/claude-plugins
+   claude plugin install usage-pace@gontzalo --config language=<es|en>
+   ```
+3. Decile que el widget aparece arriba del input en la próxima sesión, después de la primera respuesta, y que el idioma y los umbrales se cambian con `/plugin configure usage-pace@gontzalo`.
 
 ## Configuración
 
-Desde la configuración del plugin (`/config` en la terminal), o pidiéndoselo a Claude:
+Con `/plugin configure usage-pace@gontzalo` en Claude Code, o pidiéndoselo a Claude:
 
 | Opción | Por defecto | Qué hace |
 |---|---|---|
