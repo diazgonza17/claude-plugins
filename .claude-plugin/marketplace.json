@@ -1,0 +1,17 @@
+{
+  "name": "gontzalo",
+  "owner": {
+    "name": "Gonzalo Díaz",
+    "email": "diazgonzalo1720@gmail.com",
+    "url": "https://github.com/diazgonza17"
+  },
+  "description": "Plugins y mods para Claude Code",
+  "plugins": [
+    {
+      "name": "usage-pace",
+      "source": "./plugins/usage-pace",
+      "description": "Franja sobre el input con el % usado de la sesión de 5 horas, el tiempo al reset y un semáforo de ritmo",
+      "version": "0.1.0"
+    }
+  ]
+}
